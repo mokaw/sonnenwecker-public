@@ -1,0 +1,54 @@
+<ion-grid [fixed]="true" *ngIf="city"
+  ><h1>Wecker</h1>
+  <ion-row>
+    <ion-col style="align-content: center" size="3">
+      {{ sunriseInfoList?.date | date : "EEEE" | germanWeekdays }}
+    </ion-col>
+    <ion-col style="align-content: center" size="3">
+      <ion-datetime-button
+        presentation="time"
+        datetime="datetime"
+      ></ion-datetime-button>
+      <ion-modal trigger="datetime" [keepContentsMounted]="true">
+        <ng-template>
+          <ion-datetime
+            presentation="time"
+            id="datetime"
+            [value]="isoSunrise"
+            (ionChange)="onIonChange($event)"
+          ></ion-datetime>
+        </ng-template>
+      </ion-modal>
+    </ion-col>
+    <ion-col class="alarmButton" size="6">
+      <ion-toggle
+        color="secondary"
+        [checked]="alarm"
+        (ionChange)="isAlarm()"
+      ></ion-toggle>
+    </ion-col>
+  </ion-row>
+</ion-grid>
+
+<!-- <ion-modal [isOpen]="isModalOpen">
+  <ng-template>
+    <ion-header>
+      <ion-toolbar>
+        <ion-buttons slot="start">
+          <ion-button (click)="setOpen(false)">Cancel</ion-button>
+        </ion-buttons>
+        <ion-title>Wecker</ion-title>
+        <ion-buttons slot="end">
+          <ion-button [strong]="true" (click)="setOpen(false, true)"
+            >Confirm</ion-button
+          >
+        </ion-buttons>
+      </ion-toolbar>
+    </ion-header>
+    <ion-datetime
+      presentation="time"
+      id="datetime"
+      [value]="isoSunrise"
+    ></ion-datetime>
+  </ng-template>
+</ion-modal> -->

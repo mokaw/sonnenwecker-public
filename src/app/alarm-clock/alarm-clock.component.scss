@@ -1,0 +1,62 @@
+ion-grid {
+  width: 37vw;
+}
+
+.alarmButton {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 2em;
+}
+ion-toggle::part(track) {
+  background: #ddd;
+}
+ion-toggle.toggle-checked::part(track) {
+  background: #67997e;
+
+  /* Required for iOS handle to overflow the height of the track */
+  overflow: visible;
+}
+
+ion-toggle::part(handle) {
+  background: #737674;
+
+  border-radius: 10px;
+  box-shadow: none;
+}
+
+ion-toggle.toggle-checked::part(handle) {
+  background: #3d6851;
+}
+
+ion-datetime-button::part(native) {
+  background-color: #2e2e2e;
+  color: #ffffff;
+}
+
+ion-modal {
+  --background: #67997e;
+  --border-radius: 20px;
+}
+
+ion-datetime {
+  --background: rgba(74, 84, 79, 0.231);
+  --background-rgb: rgba(74, 85, 79, 0.231);
+  border-radius: 16px;
+  --wheel-highlight-background: lab(40.39% -20.69 8.33);
+  --wheel-highlight-border-radius: 20px;
+}
+
+ion-datetime::part(wheel-item) {
+  color: rgba(224, 228, 226, 0.911);
+}
+/* Ansicht für Smartphones bzw. Bildschirme, die kleiner als 38.75em (= 620px) sind */
+
+@media screen and (max-width: 38.75em) {
+  ion-grid {
+    width: 85vw;
+    color: aliceblue;
+  }
+
+
+}

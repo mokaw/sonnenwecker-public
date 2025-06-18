@@ -1,0 +1,7 @@
+{
+  "name": "Sonnenwecker",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}

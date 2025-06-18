@@ -1,0 +1,22 @@
+<ion-app>
+  <ion-header>
+    <ion-toolbar color="">
+      <ion-title>
+        <div class="title">Sonnenwecker</div>
+      </ion-title>
+    </ion-toolbar>
+  </ion-header>
+  <ion-content>
+    <div>
+      <div class="searchbar content">
+        <app-searchbar (cityNameEvent)="handleEnter($event)"></app-searchbar>
+      </div>
+      <div class="content">
+        <app-weather-info [city] = "cityName"></app-weather-info>
+      </div>
+      <div class="content">
+          <app-alarm-clock [city]="cityName"></app-alarm-clock>
+      </div>
+    </div>
+  </ion-content>
+</ion-app>

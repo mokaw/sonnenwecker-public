@@ -1,0 +1,29 @@
+<ion-card *ngIf="!city">
+  <ion-card-content>
+    <p class="emptySearchbar">Enter a city in the search bar to get started.</p>
+  </ion-card-content>
+</ion-card>
+
+<ion-card *ngIf="city">
+  <ion-card-header>
+    <ion-card-title>{{ weatherInfoList?.location.name }}</ion-card-title>
+    <ion-card-subtitle>{{
+      weatherInfoList?.location.localtime ? ( weatherInfoList?.location.localtime | date : "EEEE" | germanWeekdays) : ''
+    }}</ion-card-subtitle>
+  </ion-card-header>
+
+  <ion-card-content>
+    <ion-img
+      
+      [src]= "weatherIcon"
+      alt="bewölkt"
+    ></ion-img>
+    
+ 
+    <p>{{ weatherInfoList?.current.temp_c | number : "1.0-0" }} °C</p>
+    <p>{{ weatherInfoList?.current.condition.text}}</p>
+    <p>Sonnenaufgang: {{this.weatherInfoList?.forecast.forecastday[0].astro.sunrise.slice(0,6)}} Uhr</p>
+  </ion-card-content>
+</ion-card>
+
+<hr />
