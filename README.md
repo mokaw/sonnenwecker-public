@@ -54,3 +54,18 @@ npx cap sync
 
 npx cap open android
 ```
+
+
+
+## App-Startbildschirm
+<img src="resources/screenshots/stuttgart.jpeg"  width="400"/>
+
+## Alarm anpassen
+<img src="resources/screenshots/changeAlarm.jpeg"  width="400"/>
+
+## Städte suchen
+<img src="resources/screenshots/quebec.jpeg"  width="400"/>
+
+## Notification/ Alarm
+
+<img src="resources/screenshots/notification.JPG"  width="400"/>
